@@ -6,15 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Doctor;
 
-class Clinic extends Model
+class Slot extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'address',
+        'slot',
     ];
-    
+
     public function doctors()
     {
         return $this->belongsToMany(Doctor::class);
